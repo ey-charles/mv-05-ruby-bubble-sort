@@ -5,10 +5,9 @@ def bubble_sort(arr)
 
   while swapped == true
     arr.each_with_index do |n, i|
-      swapped = false
-
       unless arr[i+1].nil?
-        if arr[i+1] > arr[i]
+        swapped = false
+        if n > arr[i + 1]
           arr[i], arr[i+1] = arr[i+1], arr[i]
           swapped = true
         end
