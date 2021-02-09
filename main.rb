@@ -28,17 +28,15 @@ def bubble_sort_by(arr)
 
       swapped = false
 
-      yield(arr[i], arr[i + 1])
+      j = yield(arr[i], arr[i + 1])
 
-      if n > arr[i + 1]
+      if j > 0
         arr[i], arr[i + 1] = arr[i + 1], arr[i]
         swapped = true
       end
     end
   end
-
-  arr
-  
+  p arr
 end
 
 bubble_sort_by(["hi","hello","hey"]) do |left,right|
@@ -49,10 +47,6 @@ end
 my_array = [5, 4, 2, 3, 8, 7]
 
 word_array = ['hi', 'hello', 'hey']
-
-bubble_sort_by(word_array) do |word|
-  puts word
-end
 
 p bubble_sort(my_array)
 
